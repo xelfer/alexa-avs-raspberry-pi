@@ -245,7 +245,7 @@ public class CompanionAppAuthManager {
                         log.error(
                                 "There was a problem connecting to the LWA service. Trying again in {} seconds",
                                 TOKEN_REFRESH_RETRY_INTERVAL_IN_S);
-                        Thread.sleep(TOKEN_REFRESH_RETRY_INTERVAL_IN_S);
+                        Thread.sleep(TOKEN_REFRESH_RETRY_INTERVAL_IN_S * 1000);
                     } catch (InterruptedException ie) {
                         log.error("Interrupted while waiting to retry connecting to LWA", ie);
                     }
